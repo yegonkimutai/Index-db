@@ -46,4 +46,8 @@ request.onsuccess = function() {
     makeQuery.onsuccess = function() {
         console.log('makeQuery', makeQuery.result);
     }
+
+    transaction.oncomplete = function() {
+        db.close();
+    }
 }
